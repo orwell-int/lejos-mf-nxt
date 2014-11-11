@@ -1,0 +1,22 @@
+after_success: 
+- mvn clean cobertura:cobertura coveralls:report -q
+before_install: 
+- wget -nc --no-check-certificate http://sourceforge.net/projects/lejos/files/lejos-NXJ/0.9.1beta/leJOS_NXJ_0.9.1beta-3.tar.gz/download -O ./leJOS_NXJ_0.9.1beta-3.tar.gz
+- tar -xvf leJOS_NXJ_0.9.1beta-3.tar.gz
+language: java
+notifications: 
+  recipients: 
+  - miludmann+travis@gmail.com
+  slack:
+    rooms:
+      secure: nCWjD+saKx7k5arMZFksP9xwHAPf1bDcluztPtYS7rwmAxhyn8v40BMwlSwUHHcjGGZB/Rp+ablnhe5AHnFtQY11C4tulScz/ruWG2L5X29m47uwr0sEzQa/rIq/Kms4ISF57zjPmppVTNKv4NbMQSL/Hcxfc69HctKJzKzcszY=
+    on_success: always
+    on_failure: always
+  email: 
+    on_success: change
+    on_failure: always
+env: 
+- NXJ_HOME=leJOS_NXJ_0.9.1beta-3
+install: 
+- mvn validate -q
+- mvn clean install
