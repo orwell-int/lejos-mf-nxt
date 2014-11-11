@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>lejos.mf</groupId>
+	<artifactId>nxt-module</artifactId>
+	<version>0.1.0</version>
+	<name>LeJOS message framework - nxt-module</name>
+	<dependencies>
+		<dependency>
+			<groupId>lejos.mf</groupId>
+			<artifactId>common</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>lejos.nxt</groupId>
+			<artifactId>classes</artifactId>
+			<version>0.9.1beta-3</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<goalPrefix>nxj</goalPrefix>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
