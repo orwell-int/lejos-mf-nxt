@@ -16,7 +16,7 @@ notifications:
     on_success: change
     on_failure: always
 env: 
-- NXJ_HOME=leJOS_NXJ_0.9.1beta-3
+- NXJ_HOME=$TRAVIS_BUILD_DIR/leJOS_NXJ_0.9.1beta-3
 install: 
 - mvn validate -q
 - mvn clean install
