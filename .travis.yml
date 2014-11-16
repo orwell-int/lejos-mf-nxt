@@ -1,6 +1,7 @@
 after_success: 
 - mvn clean cobertura:cobertura coveralls:report -q
 before_install: 
+- git submodule init && git submodule update
 - wget -nc --no-check-certificate http://sourceforge.net/projects/lejos/files/lejos-NXJ/0.9.1beta/leJOS_NXJ_0.9.1beta-3.tar.gz/download -O ./leJOS_NXJ_0.9.1beta-3.tar.gz
 - tar -xvf leJOS_NXJ_0.9.1beta-3.tar.gz
 language: java
