@@ -18,5 +18,6 @@ notifications:
 env: 
 - NXJ_HOME=leJOS_NXJ_0.9.1beta-3
 install: 
+- mvn install:install-file -Dfile=$NXJ_HOME/lib/nxt/classes.jar -DgroupId=lejos.nxt -DartifactId=classes -Dversion=0.9.1beta-3 -Dpackaging=jar 
 - mvn validate -q
 - mvn clean install
