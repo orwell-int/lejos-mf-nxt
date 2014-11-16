@@ -19,11 +19,6 @@
 			<artifactId>classes</artifactId>
 			<version>0.9.1beta-3</version>
 		</dependency>
-		<dependency>
-			<groupId>lejos.pc</groupId>
-			<artifactId>jtools</artifactId>
-			<version>0.9.1beta-3</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
